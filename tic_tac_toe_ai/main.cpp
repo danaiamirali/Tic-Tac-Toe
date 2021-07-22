@@ -16,7 +16,14 @@ int main()
     while (gameStatus(board) == 0);
 
     printBoard(board);
-    std::cout << "Player " << playerDormant << " wins!\n";
+    if (gameStatus(board) == 1)
+    {
+        std::cout << "Player " << playerDormant << " wins!\n";
+    }
+    else
+    {
+        std::cout << "Tie! Nobody wins!\n";
+    }
 
     return 0;
 }
