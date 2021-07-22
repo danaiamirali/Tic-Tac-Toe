@@ -16,7 +16,7 @@ int main()
     while (gameStatus(board) == 0);
 
     printBoard(board);
-    std::cout << "Player " << playerActive << " wins!\n";
+    std::cout << "Player " << playerDormant << " wins!\n";
 
     return 0;
 }
