@@ -3,6 +3,7 @@
 #include <string>
 #include <stdlib.h>
 #include <array>
+#include <sstream>
 
 extern char winningLetter;
 void setBoard(std::string board[3][3]);

@@ -34,6 +34,7 @@ void printBoard(std::string board[3][3])
 
     }
 }
+
 bool checkChoice(int choice)
 {
     for (int i = 0; i < availableMoves.size(); i++)
@@ -45,6 +46,7 @@ bool checkChoice(int choice)
     }
     return false;
 }
+
 void simulateRound(std::string board[3][3], int player)
 {
     printBoard(board);
@@ -52,7 +54,21 @@ void simulateRound(std::string board[3][3], int player)
     int choice;
     do
     { 
-        std::cin >> choice;
+        std::string inp;
+        std::getline(std::cin, inp);
+        try
+        {
+            std::stringstream convert(inp);
+            convert >> choice;
+            if (choice == 0)
+            {
+                throw 500;
+            }
+        }
+        catch(int errorCode)
+        {
+            std::cerr << "Invalid Input, try again\n";
+        }
     } while (!checkChoice(choice));
     availableMoves[choice - 1] = 99;
     for (int rows = 0; rows < 3; rows++)
