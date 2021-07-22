@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tic_tac_toe_ai", "tic_tac_toe_ai\tic_tac_toe_ai.vcxproj", "{A632BB98-8244-42C7-BEA7-B9E2A5333542}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A632BB98-8244-42C7-BEA7-B9E2A5333542}.Debug|x64.ActiveCfg = Debug|x64
+		{A632BB98-8244-42C7-BEA7-B9E2A5333542}.Debug|x64.Build.0 = Debug|x64
+		{A632BB98-8244-42C7-BEA7-B9E2A5333542}.Debug|x86.ActiveCfg = Debug|Win32
+		{A632BB98-8244-42C7-BEA7-B9E2A5333542}.Debug|x86.Build.0 = Debug|Win32
+		{A632BB98-8244-42C7-BEA7-B9E2A5333542}.Release|x64.ActiveCfg = Release|x64
+		{A632BB98-8244-42C7-BEA7-B9E2A5333542}.Release|x64.Build.0 = Release|x64
+		{A632BB98-8244-42C7-BEA7-B9E2A5333542}.Release|x86.ActiveCfg = Release|Win32
+		{A632BB98-8244-42C7-BEA7-B9E2A5333542}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {29F25A2B-CBD4-4A97-BC90-0CDAFBC8B531}
+	EndGlobalSection
+EndGlobal
