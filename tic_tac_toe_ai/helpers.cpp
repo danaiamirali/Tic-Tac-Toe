@@ -1,6 +1,6 @@
 #include "helpers.h"
 
-std::array<int, 9> availableMoves = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+std::vector<int> availableMoves = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
 void setBoard(std::string board[3][3])
 {
@@ -18,7 +18,7 @@ void setBoard(std::string board[3][3])
 void printBoard(std::string board[3][3])
 {
     system("CLS");
-    std::cout << "Player 1: (O) | Player 2:(X)\n\n";
+    // std::cout << "Player 1: (O) | Player 2:(X)\n\n";
     for (int rows = 0; rows < 3; rows++)
     {
         std::cout << "     |     |     " << std::endl;
@@ -49,9 +49,17 @@ bool checkChoice(int choice)
 
 void simulateRound(std::string board[3][3], int player)
 {
-    printBoard(board);
-    std::cout << "Player " << player << "'s turn. Select a tile:\n";
+
     int choice;
+    printBoard(board);
+    if (player == 1)
+    {
+        std::cout << "O's turn. Select a tile:\n";
+    }
+    else if (player == 2)
+    {
+        std::cout << "X's turn. Select a tile:\n";
+    }
     do
     { 
         std::string inp;
@@ -70,7 +78,13 @@ void simulateRound(std::string board[3][3], int player)
             std::cerr << "Invalid Input, try again\n";
         }
     } while (!checkChoice(choice));
-    availableMoves[choice - 1] = 99;
+    for (int i = 0; i < availableMoves.size(); i++)
+    {
+        if (choice == availableMoves[i])
+        {
+            availableMoves.erase(availableMoves.begin() + i);
+        }
+    }
     for (int rows = 0; rows < 3; rows++)
     {
         for (int columns = 0; columns < 3; columns++)
@@ -88,9 +102,10 @@ void simulateRound(std::string board[3][3], int player)
             }
         }
     }
+    // std::cout << "Player " << player << " plays on tile " << choice << std::endl;
 }
-char winningLetter;
 
+char winningLetter;
 int gameStatus(std::string board[3][3])
 {
     // Check for win

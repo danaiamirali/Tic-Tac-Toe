@@ -3,6 +3,7 @@
 #include <string>
 #include <stdlib.h>
 #include <array>
+#include <vector>
 #include <sstream>
 
 extern char winningLetter;
